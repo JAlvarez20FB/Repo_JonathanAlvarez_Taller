@@ -18,12 +18,17 @@ Entradas: abc, 123, utpl→Acceso concedido en 3 intento(s)
 public class WhileBasico {
     public static void main(String[] args) {
         Scanner tcl = new Scanner(System.in);
-        String contra = "utpl";
-        int cnt = 1;
-        while (contra != "utpl") {
-            System.out.println("INTENTO "+ cnt);
-            System.out.println("ingrese la contraseña:");
-            cnt += 1;
+        String contrasenaCorrecta = "utpl";
+        String contrasenaIngresada;
+        int intentos = 0;
+        while (true) {
+            System.out.print("Ingrese la contraseña: ");
+            contrasenaIngresada = tcl.nextLine();
+            intentos++;
+            if (contrasenaIngresada.equals(contrasenaCorrecta)) {
+                System.out.println("Acceso concedido en " + intentos + " intento(s)");
+                break;
+            }
         }
     }
 }

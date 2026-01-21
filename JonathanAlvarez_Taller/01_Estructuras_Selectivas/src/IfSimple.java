@@ -14,7 +14,7 @@ Ejemplo (entrada → salida):
 
 18→Acceso permitido
 -2→Edad inválida
- * @author ASUS TUF
+ * @author Jonathan Alvarez
  */
 public class IfSimple {
     public static void main(String[] args) {
